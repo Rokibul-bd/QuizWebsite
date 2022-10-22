@@ -11,7 +11,7 @@ const Header = () => {
         <nav className='shadow-lg flex justify-between px-24 items-center relative'>
             <NavLink className="text-2xl text-teal-600" to="/">Play Quiz Game</NavLink>
             <Bars3Icon onClick={toggleButton} className='h-6 w-6 absolute top-2 right-4 md:hidden'></Bars3Icon>
-            <div className={isShow ? 'hidden' : 'block'}>
+            <div className={isShow ? 'block' : 'hidden'}>
                 <ul className='md:flex gap-4 py-4 text-xl'>
                     <li><NavLink to="/topic">Topic</NavLink></li>
                     <li><NavLink to="/static">Static</NavLink></li>

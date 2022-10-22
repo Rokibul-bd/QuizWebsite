@@ -3,6 +3,7 @@ import Blogs from "./Components/Blogs/Blogs";
 import Courses from "./Components/Courses/Courses";
 import Home from "./Components/Home/Home";
 import Quiz from "./Components/quiz/Quiz";
+import Static from "./Components/Static/Static";
 import Main from "./Lyout/Main/Main";
 function App() {
   const router = createBrowserRouter([
@@ -31,7 +32,10 @@ function App() {
         },
         {
           path: '/static',
-          element: <div>Static Page</div>
+          loader: async () => {
+            return fetch('https://openapi.programming-hero.com/api/quiz')
+          },
+          element: <Static></Static>
         },
         {
           path: '/blog',
