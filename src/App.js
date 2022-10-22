@@ -23,7 +23,10 @@ function App() {
         },
         {
           path: '/topic',
-          element: <div>Topic Page</div>
+          loader: async () => {
+            return fetch('https://openapi.programming-hero.com/api/quiz')
+          },
+          element: <Courses></Courses>
         },
         {
           path: '/static',
@@ -32,6 +35,9 @@ function App() {
         {
           path: '/blog',
           element: <Blogs></Blogs>
+        },
+        {
+          path: '*', element: <div>You have no any content</div>
         }
       ],
       element: <Main></Main>

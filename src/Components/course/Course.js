@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-
+import { ArrowRightIcon } from '@heroicons/react/24/solid'
 const Course = ({ course }) => {
     const { name, logo, total, id } = course
     return (
@@ -10,7 +10,7 @@ const Course = ({ course }) => {
             <div className='flex justify-between'>
                 <h3 className='text-2xl'>{name}</h3>
                 <NavLink to={`/${id}`}>
-                    <button className='bg-white shadow-md rounded-md text-black px-4 py-2 text-xl hover:bg-slate-300'>Start Practice</button>
+                    <button className='bg-white shadow-md rounded-md text-black px-4 py-2 text-xl hover:bg-slate-300'>Start Practice <ArrowRightIcon className='h-6 w-6 inline'></ArrowRightIcon> </button>
                 </NavLink>
             </div>
         </div>
