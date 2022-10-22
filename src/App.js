@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Blogs from "./Components/Blogs/Blogs";
 import Courses from "./Components/Courses/Courses";
 import Quiz from "./Components/quiz/Quiz";
 import Main from "./Lyout/Main/Main";
@@ -30,7 +31,7 @@ function App() {
         },
         {
           path: '/blog',
-          element: <div>Blog Page</div>
+          element: <Blogs></Blogs>
         }
       ],
       element: <Main></Main>
