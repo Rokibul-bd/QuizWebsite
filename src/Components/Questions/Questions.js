@@ -18,7 +18,7 @@ const SingleQuiz = ({ questionQuiz }) => {
             <h4 className={isShow ? "hidden ml-2" : undefined}>Answer: {correctAnswer}</h4>
             <div className='md:grid grid-cols-2 mt-8'>
                 {
-                    options.map(option => <Option key={option.id} option={option}></Option>)
+                    options.map(option => <Option key={option.id} option={option} correctAnswer={correctAnswer}></Option>)
                 }
             </div>
         </div>

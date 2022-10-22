@@ -8,7 +8,7 @@ const Header = () => {
         setShow(!isShow)
     }
     return (
-        <nav className='shadow-lg flex justify-between px-24 items-center relative'>
+        <nav className='shadow-lg flex justify-between px-24 items-center relative py-4'>
             <NavLink className="text-2xl text-teal-600" to="/">Play Quiz Game</NavLink>
             <Bars3Icon onClick={toggleButton} className='h-6 w-6 absolute top-2 right-4 md:hidden'></Bars3Icon>
             <div className={isShow ? 'block' : 'hidden'}>
